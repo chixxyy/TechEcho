@@ -6,9 +6,7 @@
   @resize.window="if (window.innerWidth > 768) open = false">
   <div class="flex items-center justify-between">
     <div class="flex items-center text-3xl font-bold text-vanilla-7">
-      {% include 'layouts/tags.html' %}
         <a href="{% url 'index' %}" class="flex items-center">
-
             TECHECHO
             <img src="https://techecho.s3.ap-southeast-1.amazonaws.com/homepage_pictures/techecho_logo.png" alt="logo" class="w-16 ml-1 h-14">
 
@@ -48,11 +46,19 @@
           style="display: none"
         >
           <li>
+            <li>
+              <a
+                href="{% url 'blogs:new' %}"
+                class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-green-4 hover:text-white"
+              >
+                發文章
+              </a>
+            </li>
             <a
               href="{% url 'blogs:index' %}"
               class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-green-4 hover:text-white"
             >
-              分享
+              看文章
             </a>
           </li>
         </ul>
@@ -169,6 +175,7 @@
           </li>
         </ul>
       </div>
+      {% include "layouts/darkmode.html" %}
       {% include "layouts/notifications.html" with user=user %} {% else %}
       <li>
         <a
@@ -209,9 +216,16 @@
       <ul x-show="articleOpen" class="mt-2 ml-4">
         <li>
           <a
+            href="{% url 'blogs:new' %}"
+            class="block px-4 py-2 transition duration-300 ease-in-out text-green-3 hover:bg-green-4 hover:text-white">
+            發文章
+          </a>
+        </li>
+        <li>
+          <a
             href="{% url 'blogs:index' %}"
             class="block px-4 py-2 transition duration-300 ease-in-out text-green-3 hover:bg-green-4 hover:text-white">
-            分享
+            看文章
           </a>
         </li>
       </ul>
