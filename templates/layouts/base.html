@@ -18,7 +18,7 @@
 </head>
 
 <body x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }"
-      :class="{ 'bg-black text-white': darkMode, 'bg-white text-black': !darkMode }"
+      :class="{ 'bg-black': darkMode, 'bg-white': !darkMode, 'dark': darkMode }"
       x-init="$watch('darkMode', value => localStorage.setItem('darkMode', value))"
       class="flex flex-col min-h-screen transition-colors duration-500"
       hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>

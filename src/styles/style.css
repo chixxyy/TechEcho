@@ -131,7 +131,7 @@
 }
 
 .btn-techecho2 {
-  @apply bg-white text-green-3 hover:bg-black hover:text-white;
+  @apply bg-white text-green-3 hover:bg-orange-9 hover:text-white;
 }
 
 html {
