@@ -2,18 +2,18 @@
 
 {% block content %}
 
-<div class="flex flex-wrap w-full h-full max-w-full mx-auto items-center">
+<div class="flex flex-wrap items-center w-full h-full max-w-full mx-auto">
     <div class="flex-1 max-w-4xl m-3 mx-auto">
-        <div class="flex flex-wrap justify-between p-2 w-full">
+        <div class="flex flex-wrap justify-between w-full p-2">
             <h2 class="text-3xl font-bold sm:text-5xl text-blue-2">專家列表</h2>
-            <section class="flex gap-1 md:gap-2 md:flex-row " x-data="{ selectedLabel: localStorage.getItem('selectedLabel') || '' }">
-                <select class="select select-bordered border-blue-1 sm:text-lg" @change="selectedLabel = $event.target.value; localStorage.setItem('selectedLabel', $event.target.value); window.location.href = '?label=' + encodeURIComponent($event.target.value)">
+            <section class="flex gap-1 md:gap-2 md:flex-row" x-data="{ selectedLabel: localStorage.getItem('selectedLabel') || '' }">
+                <select class="select select-bordered border-blue-1 sm:text-lg dark:text-black" @change="selectedLabel = $event.target.value; localStorage.setItem('selectedLabel', $event.target.value); window.location.href = '?label=' + encodeURIComponent($event.target.value)">
                     <option value="" :selected="selectedLabel === ''" selected="selected">選擇專業標籤</option>
                     {% for label in all_labels %}
                         <option value="{{ label|lower }}" :selected="selectedLabel === '{{ label|lower }}'">{{ label }}</option>
                     {% endfor %}
                 </select>
-                <a href="{% url 'teachers:index' %}" class="btn btn-outline border border-blue-1 sm:w-auto sm:text-lg" @click="selectedLabel = ''; localStorage.removeItem('selectedLabel')">重置標籤</a>
+                <a href="{% url 'teachers:index' %}" class="border btn btn-techecho2 border-blue-1 sm:w-auto sm:text-lg" @click="selectedLabel = ''; localStorage.removeItem('selectedLabel')">重置標籤</a>
             </section>
             {% if user.is_authenticated and not user.is_student %}
                 <a href="{% url 'payments:index' %}" class="text-black btn bg-orange-9 hover:bg-orange-8 hover:text-white ">
@@ -31,14 +31,14 @@
                 {% else %}
                     {% for teacher in teachers %}
                     <a href="{% url 'teachers:show' teacher.id %}"
-                    class="block w-full max-w-full p-4 mb-4 duration-300 border-2 rounded-lg shadow-md border-orange-8 hover:bg-gray-200">
+                    class="block w-full max-w-full p-4 mb-4 duration-300 border-2 rounded-lg shadow-md border-orange-8">
                     <div class="flex justify-around w-full max-w-full p-4 mb-4 border-2 rounded-lg shadow-md border-orange-9">
                         <div class="flex items-center justify-center w-1/3 max-w-full">
                             {% include "teachers/partials/_picture.html" with user=teacher.user size="32" margin="4" %}
                         </div>
                         <div class="flex flex-col justify-around w-2/3 max-w-full ml-4">
                             <h3 class="text-2xl font-semibold leading-normal text-center text-orange-8">{{ teacher.user.get_display_name }}</h3>
-                            <p class="m-2 text-xl leading-normal text-center">
+                            <p class="m-2 text-xl leading-normal text-center dark:text-white">
                             專業能力:
                             {% if teacher.labels.all.exists %}
                                 {% for label in teacher.labels.all %}
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="mt-1 text-xl leading-relaxed text-gray-600"
+                        <p class="mt-1 text-xl leading-relaxed text-gray-600 dark:text-white"
                            style="word-break: break-all; overflow-wrap: break-word;">
                            介紹：{{ teacher.introduce|truncatechars:30 }}
                         </p>

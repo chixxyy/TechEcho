@@ -3,9 +3,9 @@
     {% for question in questions %}
     <li class="p-2 mb-1 break-all border-2 shadow text-wrap">
         <div class="flex items-center justify-between">
-            <a href="{% url 'questions:show' question.id%}" class="text-2xl link">{{question.title}}</a>
+            <a href="{% url 'questions:show' question.id%}" class="text-2xl link dark:text-white">{{question.title}}</a>
             <div class="relative" x-data="{show: false}" @mouseover="show=true" @mouseleave="show=false">
-                <a href="#" class="flex items-center gap-1">
+                <a href="#" class="flex items-center gap-1 dark:text-white">
                     {% include "users/partials/_picture.html" with user=question.user size="7" margin="0" only %}
                     <div x-data="convert_to_svg">{{question.user}} {{question.user|teacher_icon}} {{question.user|student_icon}}</div>
                 </a>
@@ -14,17 +14,17 @@
         </div>
 
         <div>
-            <span>標籤：</span>
+            <span class="dark:text-white">標籤：</span>
             {% for label in question.labels.all %}
-            <span>{{label}}, </span>
+            <span class="dark:text-white">{{label}}, </span>
             {% endfor %}
         </div>
 
         <div>
-            <span>
+            <span class="dark:text-white">
                 {{question.votes_count}} 個讚 |
             </span>
-            <span>
+            <span class="dark:text-white">
                 {{question.answers_count}} 個回答
             </span>
         </div>
