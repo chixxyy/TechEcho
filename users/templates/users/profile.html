@@ -13,7 +13,7 @@
 }"
 
 >
-  <div class="flex items-start flex-wrap md:flex-nowrap">
+  <div class="flex flex-wrap items-start md:flex-nowrap">
     <aside class="flex-shrink-0 w-64">
       <div class="mb-6">
         <div class="relative w-32 h-32 mt-4 mb-4">
@@ -24,10 +24,10 @@
             ></i>
           </a>
         </div>
-        <h2 class="pl-8 text-lg font-semibold">{{ user }}</h2>
+        <h2 class="pl-8 text-lg font-semibold dark:text-white">{{ user }}</h2>
       </div>
       <nav>
-        <ul class="space-y-2">
+        <ul class="space-y-2 dark:text-white">
           <li>
             <a
               href="#"
@@ -41,7 +41,7 @@
               <li>
                 <a
                   href="#"
-                  class="flex items-center text-gray-700"
+                  class="flex items-center text-gray-700 dark:text-white"
                   @click.prevent="setView('profile')"
                 >
                   基本資料
@@ -50,7 +50,7 @@
               <li>
                 <a
                   href="{% url 'users:public_profile' user.id %}"
-                  class="flex items-center text-gray-700"
+                  class="flex items-center text-gray-700 dark:text-white"
                 >
                   我公開的個人資料
                 </a>
@@ -79,7 +79,7 @@
               <li>
                 <a
                   href="#"
-                  class="flex items-center text-gray-700"
+                  class="flex items-center text-gray-700 dark:text-white"
                   @click.prevent="setView('reservations_student')"
                 >
                   <i class="fa-regular fa-calendar"></i>
@@ -89,7 +89,7 @@
               <li>
                 <a
                   href="#"
-                  class="flex items-center text-gray-700"
+                  class="flex items-center text-gray-700 dark:text-white"
                   @click.prevent="setView('reservations_teacher')"
                 >
                   <i class="fa-regular fa-calendar"></i>
@@ -111,7 +111,7 @@
               <li>
                 <a
                   href="#"
-                  class="flex items-center text-gray-700"
+                  class="flex items-center text-gray-700 dark:text-white"
                   @click.prevent="setView('_my_questions')"
                 >
                   我的發問
@@ -120,7 +120,7 @@
               <li>
                 <a
                   href="#"
-                  class="flex items-center text-gray-700"
+                  class="flex items-center text-gray-700 dark:text-white"
                   @click.prevent="setView('_answered_questions')"
                 >
                   我回答過的
@@ -129,7 +129,7 @@
               <li>
                 <a
                   href="#"
-                  class="flex items-center text-gray-700"
+                  class="flex items-center text-gray-700 dark:text-white"
                   @click.prevent="setView('_my_blogs')"
                 >
                   我發過的文章

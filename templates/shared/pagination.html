@@ -1,5 +1,5 @@
 {% if pages.object_list %}
-<ul class="join flex justify-center gap-2">
+<ul class="flex justify-center gap-2 join">
     {% if pages.has_previous %}
     <li>
         <a class="join-item btn" href="?page={{pages.previous_page_number}}">
@@ -10,7 +10,7 @@
 
     {% if pages.number|add:'-2' > 1 %}
     <li>
-        <a class="join-item btn btn-disabled">&hellip;</a>
+        <a class="join-item btn btn-disabled dark:bg-white">&hellip;</a>
     </li>
     {% endif %}
 
@@ -31,7 +31,7 @@
 
         {% if pages.paginator.num_pages > pages.number|add:'2' %}
         <li>
-            <a class="join-item btn btn-disabled">&hellip;</a>
+            <a class="join-item btn btn-disabled dark:bg-white">&hellip;</a>
         </li>
         {% endif %}
 

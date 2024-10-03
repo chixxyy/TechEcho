@@ -10,7 +10,7 @@
           {% csrf_token %}
           <div class="flex items-center justify-center">
             🔗
-            <input type="url" id="github_link" name="github_link" value="{{ user.github_link|default:'' }}" placeholder="請輸入您的gitHub連結" class="border rounded ml-1">
+            <input type="url" id="github_link" name="github_link" value="{{ user.github_link|default:'' }}" placeholder="請輸入您的gitHub連結" class="ml-1 border rounded">
           </div>
         </div>
         <hr class="my-6 border-t border-gray-300" />
@@ -73,7 +73,7 @@
             class="w-full border solid border-block-500"
         />
     </div>
-       <button type="submit" class="btn btn-sm bg-green-600 text-white">更新</button>
+       <button type="submit" class="text-white bg-green-600 btn btn-sm">更新</button>
       </form>
       </div>
     </div>
