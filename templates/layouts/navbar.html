@@ -176,7 +176,7 @@
         </ul>
       </div>
       {% include "layouts/darkmode.html" %}
-      {% include "layouts/notifications.html" with user=user %} {% else %}
+      {% include "layouts/notifications.html" with user=user %} {% include "layouts/tags.html" %}{% else %}
       <li>
         <a
           href="{% url 'users:login'%}?next={{ request.path }}"
