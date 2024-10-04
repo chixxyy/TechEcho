@@ -15,6 +15,9 @@ import {
     faCamera,
     faBars,
     faTimes,
+    faMoon,
+    faSun,
+    faTags,
     faThumbsUp as fasThumbsUp,
     faThumbsDown as fasThumbsDown
 } from "@fortawesome/free-solid-svg-icons"
@@ -44,6 +47,9 @@ library.add(
     faCamera,
     faBars,
     faTimes,
+    faMoon,
+    faSun,
+    faTags,
 )
 
 dom.i2svg()

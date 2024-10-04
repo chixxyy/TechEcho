@@ -1,18 +1,12 @@
 <div x-data="{ open: false, search: '' }" class="relative">
     <button @click="open = !open" class="z-20 flex p-2 text-white">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-tags"></i>
     </button>
 
     <div
         x-show="open"
-        class="fixed top-0 left-0 z-10 hidden h-full p-4 transition-transform transform bg-white shadow-lg w-60"
-        :class="{ '-translate-x-full': !open, 'translate-x-0': open, '!block': open }"
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="-translate-x-full"
-        x-transition:enter-end="translate-x-0"
-        x-transition:leave="transition ease-in duration-300"
-        x-transition:leave-start="translate-x-0"
-        x-transition:leave-end="-translate-x-full"
+        class="fixed top-0 right-0 z-50 hidden w-64 h-full p-4 bg-white shadow-lg"
+        :class="{'!block': open }"
     >
         <button @click="open = false" class="absolute text-green-3 top-4 right-4">
             <i class="fa-solid fa-times"></i>

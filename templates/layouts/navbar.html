@@ -6,9 +6,7 @@
   @resize.window="if (window.innerWidth > 768) open = false">
   <div class="flex items-center justify-between">
     <div class="flex items-center text-3xl font-bold text-vanilla-7">
-      {% include 'layouts/tags.html' %}
         <a href="{% url 'index' %}" class="flex items-center">
-
             TECHECHO
             <img src="https://techecho.s3.ap-southeast-1.amazonaws.com/homepage_pictures/techecho_logo.png" alt="logo" class="w-16 ml-1 h-14">
 
@@ -32,7 +30,7 @@
       </form>
     {% endif %}
 
-    <ul class="hidden space-x-2 text-white md:space-x-4 lg:space-x-6 xl:space-x-10 md:text-lg lg:text-xl xl:text-2xl md:flex whitespace-nowrap">
+    <ul class="items-center hidden space-x-2 text-white md:space-x-4 lg:space-x-6 xl:space-x-10 md:text-lg lg:text-xl xl:text-2xl md:flex whitespace-nowrap">
       <li class="relative tooltip tooltip-bottom" data-tip="發佈文章">
         <button
           type="button"
@@ -48,11 +46,19 @@
           style="display: none"
         >
           <li>
+            <li>
+              <a
+                href="{% url 'blogs:new' %}"
+                class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-green-4 hover:text-white"
+              >
+                發文章
+              </a>
+            </li>
             <a
               href="{% url 'blogs:index' %}"
               class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-green-4 hover:text-white"
             >
-              分享
+              看文章
             </a>
           </li>
         </ul>
@@ -169,7 +175,8 @@
           </li>
         </ul>
       </div>
-      {% include "layouts/notifications.html" with user=user %} {% else %}
+      {% include "layouts/darkmode.html" %}
+      {% include "layouts/notifications.html" with user=user %} {% include "layouts/tags.html" %}{% else %}
       <li>
         <a
           href="{% url 'users:login'%}?next={{ request.path }}"
@@ -184,13 +191,15 @@
           >註冊
         </a>
       </li>
+      {% include "layouts/darkmode.html" %}
+      {% include "layouts/tags.html" %}
       {% endif %}
     </ul>
     <button
       type="button"
       @click="open = !open"
-      class="relative text-xl text-white md:hidden whitespace-nowrap">
-      選單
+      class="relative text-3xl text-white md:hidden whitespace-nowrap">
+      <i class="fa-solid fa-bars"></i>
     </button>
   </div>
 
@@ -209,9 +218,16 @@
       <ul x-show="articleOpen" class="mt-2 ml-4">
         <li>
           <a
+            href="{% url 'blogs:new' %}"
+            class="block px-4 py-2 transition duration-300 ease-in-out text-green-3 hover:bg-green-4 hover:text-white">
+            發文章
+          </a>
+        </li>
+        <li>
+          <a
             href="{% url 'blogs:index' %}"
             class="block px-4 py-2 transition duration-300 ease-in-out text-green-3 hover:bg-green-4 hover:text-white">
-            分享
+            看文章
           </a>
         </li>
       </ul>

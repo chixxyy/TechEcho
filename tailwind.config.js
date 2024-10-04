@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
-
       "./**/templates/**/*.html",
       "./**/templates/**/*.jinja",
       "./**/static/**/*.js",
@@ -41,7 +41,7 @@ module.exports = {
         'vanilla-7': '#F2B680',
         'orange-8': '#E86C0C',
         'orange-9': '#F2C10C',
-
+        'moon-10': '#1A124A',
       },
       keyframes: {
         fadeUp: {
