@@ -4,18 +4,13 @@ services:
     ports:
       - '6379:6379'
 
-  editor:
-    build:
-      context: ./editors
-      dockerfile: dockerfile.editor
-    image: 'editor:latest'
-
-  # db:
-  #   image: 'postgres:latest'
-  #   ports:
-  #     - '5432:5432'
-  #   environment:
-  #     POSTGRES_DB: mydatabase
-  #     POSTGRES_USER: myuser
-  #     POSTGRES_PASSWORD: mypassword
+  db:
+    image: 'ttonylee/techecho_postgres_image'
+    container_name: postgres_container_with_data
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
 

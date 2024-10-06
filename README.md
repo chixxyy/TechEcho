@@ -74,9 +74,10 @@
 2. `poetry install` 下載 python 相應套件
 3. `npm install` 下載 html/css/js 相應套件
 4. 使用`.env.example` 建立`.env`檔
+5. cd 到 editors ，`docker build -t editor:latest .` 建立編輯器所需的 docker image
 
 ## 執行環境
 
-1. `docker compose up -d` 建立編輯器所需的 docker image, 以及架起 redis
+1. `docker compose up -d` 架起 redis 與 postgres
 2. `npm run dev` 執行 esbuild 和 tailwind 編譯
 3. `make server` 開啟伺服器
