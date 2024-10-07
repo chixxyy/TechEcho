@@ -47,7 +47,7 @@ def search(request):
                 | Q(labels__name__icontains=term)
             )
 
-        blogs = Blog.objects.filter(blog_q_objects).distinct()
+        blogs = Blog.objects.published().filter(blog_q_objects).distinct()
 
         teacher_q_objects = Q()
         for term in search_terms:
