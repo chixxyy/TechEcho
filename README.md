@@ -1,23 +1,26 @@
 # TechEcho
 
+TechoEcho 是專為軟體開發者設計的技術交流平台，除了提供問答與知識分享，還能預約專家進行深入諮詢，並鼓勵專家與學習者發表技術文章，促進社群成長與技術交流
+
 找飯店？ Trivago
 找答案？ Techecho
 專案網址： https://www.tech-echo.dev
 
 #### 功能說明
-**1. 註冊登入：** 進入Techecho，若要發問、留言、發表技術文章請點擊註冊按鈕並登入。
+
+**1. 註冊登入：** 進入 Techecho，若要發問、留言、發表技術文章請點擊註冊按鈕並登入。
 ![home](./static/images/首頁.png)
 **2. 搜尋功能：** 搜尋關鍵字，可找出想要的問題、專家、部落格文章。
 ![search](./static/images/搜尋.png)
 **3. 問題列表：** 可以看到使用者在網站上提出的所有問題
 ![問題列表](./static/images/問題列表.png)
-**3. 成為專家：** 成為專家可以與學生一對一的教學互動，有自己的聊天室以及共編。
+**4. 成為專家：** 成為專家可以與學生一對一的教學互動，有自己的聊天室以及共編。
 以及可以排定自己的上課行程。
-**4. 成為Premium用戶：** 升級成Premium用戶可以預約專家，進行更深入的討論。
+![專家日曆](./static/images/專家日曆.png)
+**5. 成為 Premium 用戶：** 升級成 Premium 用戶可以預約專家，進行更深入的討論。
 ![chat](./static/images/聊天室.png)
-**5. 部落格：** 發表技術文章。
+**6. 部落格：** 發表技術文章。
 ![Blog](./static/images/文章列表.png)
-
 
 ## 使用技術
 
@@ -27,7 +30,7 @@
 - 版本控制：Git
 - 第三方登入：Google, GitHub
 - 上傳照片：S3
-- 部署：AWS EC2, ALB, Route53, ACM, Nginx(Web Server)
+- 部署：AWS EC2, ALB, Nginx(Web Server)
 - ASGI Server：Daphne
 - 通道層、快取：Redis
 - 執行使用者的程式碼、確保資料庫與快取的部署環境：Docker
@@ -82,8 +85,9 @@
   - 串接 AWS S3
   - 網站雲端部署
 
+## Demo 影片
 
-
+https://www.youtube.com/watch?v=NSOQoZuHBFk
 
 ## 安裝環境
 
