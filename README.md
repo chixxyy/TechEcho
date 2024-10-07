@@ -10,18 +10,23 @@ TechoEcho 是專為軟體開發者設計的技術交流平台，除了提供問�
 ## 功能說明
 
 **1. 註冊登入：** 進入 TechEcho ，若要發問、留言、發表技術文章請點擊註冊按鈕並登入。
-![home](./static/images/首頁.png) <br>
+![home](./static/images/首頁.png)
+<br>
 **2. 搜尋功能：** 搜尋關鍵字，可找出想要的問題、專家、部落格文章。
-![search](./static/images/搜尋.png) <br>
+![search](./static/images/搜尋.png)
+<br>
 **3. 問題列表：** 可以看到使用者在網站上提出的所有問題。
-![問題列表](./static/images/問題列表.png) <br>
+![問題列表](./static/images/問題列表.png)
+<br>
 **4. 成為專家：** 成為專家可以與學生一對一的教學互動，有自己的聊天室以及共編。
 以及可以排定自己的上課行程。
-![專家日曆](./static/images/專家日曆.png) <br>
+![專家日曆](./static/images/專家日曆.png)
+<br>
 **5. 成為 Premium 用戶：** 升級成 Premium 用戶可以預約專家，進行更深入的討論。
-![chat](./static/images/聊天室.png) <br>
+![chat](./static/images/聊天室.png)
+<br>
 **6. 部落格：** 發表技術文章。
-![Blog](./static/images/文章列表.png) <br>
+![Blog](./static/images/文章列表.png)
 
 ## 使用技術
 
