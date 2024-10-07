@@ -9,16 +9,16 @@
 
     <ul class="space-y-4">
         {% for blog in blogs %}
-            <li class="p-4 mb-4 border-2 rounded-lg shadow-md border-blue-2 flex items-center bg-white">
+            <li class="flex items-center p-4 mb-4 bg-white border-2 rounded-lg shadow-md border-blue-2">
                 {% if blog.image and blog.image.name %}
-                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="w-32 h-32 object-cover rounded-lg mr-4">
+                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="object-cover w-32 h-32 mr-4 rounded-lg">
                 {% else %}
-                    <img src="{% static 'images/techecho.png' %}" alt="techecho-logo" class="w-32 h-32 object-cover rounded-lg mr-4">
+                    <img src="https://techecho.s3.ap-southeast-1.amazonaws.com/homepage_pictures/techecho_logo.png" alt="techecho-logo" class="object-cover w-32 h-32 mr-4 rounded-lg">
                 {% endif %}
                 <div class="flex-1 overflow-hidden"> <!-- Added overflow-hidden class -->
                     <div class="flex items-center justify-between">
                         <div class="max-w-full"> <!-- Added max-w-full class -->
-                            <a href="{% url 'blogs:show' blog.pk %}" class="text-xl sm:text-2xl font-bold underline truncate block">{{ blog.title|striptags|truncatechars:20 }}</a>
+                            <a href="{% url 'blogs:show' blog.pk %}" class="block text-xl font-bold underline truncate sm:text-2xl">{{ blog.title|striptags|truncatechars:20 }}</a>
                             <p class="text-sm text-gray-600">標籤:
                                 {% for label in blog.labels.all %}
                                     {{label}}
