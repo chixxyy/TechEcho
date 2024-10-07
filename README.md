@@ -6,7 +6,7 @@ TechoEcho 是專為軟體開發者設計的技術交流平台，除了提供問�
 找答案？ Techecho
 專案網址： https://www.tech-echo.dev
 
-#### 功能說明
+## 功能說明
 
 **1. 註冊登入：** 進入 Techecho，若要發問、留言、發表技術文章請點擊註冊按鈕並登入。
 ![home](./static/images/首頁.png)
@@ -67,9 +67,10 @@ TechoEcho 是專為軟體開發者設計的技術交流平台，除了提供問�
 
 - 林倩瑜 / Eudora [GitHub](https://github.com/imEudora)
 
-  - 製作回答功能
-  - 老師教學時段安排
-  - 學生預約系統
+  - 回答功能
+  - 設計並串接日曆動態預約
+  - 老師授課系統
+  - 學生預約功能
 
 - 洪芷儀 / Sabina [GitHub](https://github.com/sabina726)
 
@@ -87,7 +88,7 @@ TechoEcho 是專為軟體開發者設計的技術交流平台，除了提供問�
 
 ## Demo 影片
 
-https://www.youtube.com/watch?v=NSOQoZuHBFk
+[![YouTube Video](https://img.youtube.com/vi/NSOQoZuHBFk/0.jpg)](https://www.youtube.com/watch?v=NSOQoZuHBFk)
 
 ## 安裝環境
 
