@@ -57,11 +57,11 @@
         <div class="relative w-full max-w-xl px-2 ">
             <form method="GET" action="{% url 'search' %}" class="relative flex items-center">
                 <input
-                    type="text"
-                    name="q"
-                    class="w-full p-2 pr-10 border border-gray-300 h-14 rounded-3xl"
-                    placeholder="請輸入要搜尋的程式問題關鍵字或點選下方標籤..."
-                    value="{{ query }}"
+                type="text"
+                name="q"
+                class="w-full p-2 pr-10 bg-white border border-gray-300 h-14 rounded-3xl"
+                placeholder="請輸入要搜尋的程式問題關鍵字或點選下方標籤..."
+                value="{{ query }}"
                 >
                 <button type="submit" class="absolute text-gray-500 bottom-4 right-5">
                     <i class="fa-solid fa-magnifying-glass"></i>
