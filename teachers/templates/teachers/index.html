@@ -7,7 +7,7 @@
         <div class="flex flex-wrap justify-between w-full p-2">
             <h2 class="text-3xl font-bold sm:text-5xl text-blue-2">專家列表</h2>
             <section class="flex gap-1 md:gap-2 md:flex-row" x-data="{ selectedLabel: localStorage.getItem('selectedLabel') || '' }">
-                <select class="select select-bordered border-blue-1 sm:text-lg dark:text-black" @change="selectedLabel = $event.target.value; localStorage.setItem('selectedLabel', $event.target.value); window.location.href = '?label=' + encodeURIComponent($event.target.value)">
+                <select class="bg-white select select-bordered border-blue-1 sm:text-lg dark:text-black" @change="selectedLabel = $event.target.value; localStorage.setItem('selectedLabel', $event.target.value); window.location.href = '?label=' + encodeURIComponent($event.target.value)">
                     <option value="" :selected="selectedLabel === ''" selected="selected">選擇專業標籤</option>
                     {% for label in all_labels %}
                         <option value="{{ label|lower }}" :selected="selectedLabel === '{{ label|lower }}'">{{ label }}</option>
