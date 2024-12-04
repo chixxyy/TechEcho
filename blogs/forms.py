@@ -23,14 +23,14 @@ class BlogForm(forms.ModelForm):
         widgets = {
             "title": forms.TextInput(
                 attrs={
-                    "class": "w-full p-2 border-2 border-blue-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
+                    "class": "w-full p-2 border-2 border-blue-500 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     "id": "id_title",
                     "placeholder": "請輸入標題",
                 }
             ),
             "content": forms.Textarea(
                 attrs={
-                    "class": "w-full p-2 border-2 border-blue-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
+                    "class": "w-full p-2 border-2 border-blue-500 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     "id": "id_content",
                     "placeholder": "請輸入內容",
                 }

@@ -1,18 +1,18 @@
 <div
   x-show="currentView === 'reservations_teacher'"
-  class="bg-white shadow rounded-lg p-6"
+  class="p-6 bg-white rounded-lg shadow"
 >
-  <h1 class="text-2xl font-bold mb-2">我的授課時間</h1>
-  <section class="container mx-auto border px-6 py-4 my-4 rounded-lg">
-    <div class="flex items-center p-1 gap-4">
+  <h1 class="mb-2 text-2xl font-bold">我的授課時間</h1>
+  <section class="container px-6 py-4 mx-auto my-4 border rounded-lg">
+    <div class="flex items-center gap-4 p-1">
       <a href="{% url 'reservations:teacher_new' %}" class="btn btn-techecho">
         新增時間
       </a>
-      <a class="btn btn-teacher" href="{% url "reservations:teacher_index" %}">管理授課時間</a>
+      <a class="btn btn-techecho" href="{% url "reservations:teacher_index" %}">管理授課時間</a>
     </div>
     <ul>
       {% for schedule in schedules %}
-      <li class="p-2 rounded-lg flex justify-between">
+      <li class="flex justify-between p-2 rounded-lg">
         <div class="flex items-center gap-6">
           <div>
             {{ schedule.start_time|date:'Y/m/d H:i' }} -
@@ -21,10 +21,10 @@
           <ul>
             {% if schedule.studentreservation_set.exists %}
             {% for reservation in schedule.studentreservation_set.all %}
-            <li class="font-bold flex gap-2 items-center w-full">
+            <li class="flex items-center w-full gap-2 font-bold">
               <div>
                 已被
-                <span class="text-green-600 px-2 py-1">
+                <span class="px-2 py-1 text-green-600">
                   {{ reservation.student.get_display_name }}
                 </span>
                 學生預約
@@ -45,7 +45,7 @@
         <div class="flex items-center gap-1">
           <a
             href="{% url 'reservations:teacher_edit' schedule.id %}"
-            class="btn btn-sm bg-blue-600 text-white">
+            class="text-white bg-blue-600 btn btn-sm">
             編輯
           </a>
           <form
@@ -54,13 +54,13 @@
             onsubmit="return confirm('確定要刪除嗎？')"
           >
             {% csrf_token %}
-            <button class="btn btn-sm bg-red-600 text-white">刪除</button>
+            <button class="text-white bg-red-600 btn btn-sm">刪除</button>
           </form>
         </div>
         {% endif %}
       </li>
       {% empty %}
-      <li class="text-center text-xl text-gray-500 py-4">
+      <li class="py-4 text-xl text-center text-gray-500">
         您目前尚未開放授課時間
       </li>
       {% endfor %}

@@ -37,7 +37,11 @@
                 {{ form.image.label_tag }}
                 {{ form.image }}
             </div>
-
+            
+            <button type="button" id="preview-button" class="px-4 py-2 font-bold text-white rounded-md bg-orange-8 hover:bg-orange-800">
+                預覽文章
+            </button>
+            
            {% if blog.is_draft %}
                <button type="submit" name="action" value="publish" class="px-4 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-green-600">
                    發佈文章
@@ -47,12 +51,6 @@
                    更新文章
                </button>
            {% endif %}
-
-
-           <button type="button" id="preview-button" class="px-4 py-2 font-bold text-white bg-gray-500 rounded-md hover:bg-gray-600">
-               預覽文章
-           </button>
-
 
            <button type="submit" name="action" value="save_draft" class="px-4 py-2 font-bold text-white bg-yellow-500 rounded-md hover:bg-yellow-600">
                儲存草稿
@@ -65,7 +63,7 @@
    <!-- Right Side: Preview Area -->
    <div class="w-full pl-0 md:w-1/2 md:pl-4">
        <h2 class="mb-4 text-xl font-bold text-gray-800">預覽文章內容</h2>
-       <div class="w-full border-2 shadow-xl card bg-base-100 border-blue-2">
+       <div class="w-full bg-white border-2 shadow-xl card border-blue-2">
            <div class="card-body markdown h-[75vh] overflow-auto">
                <div class="max-w-full prose break-words">
                    <!-- Image Preview on Top -->

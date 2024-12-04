@@ -10,7 +10,7 @@
           {% csrf_token %}
           <div class="flex items-center justify-center">
             🔗
-            <input type="url" id="github_link" name="github_link" value="{{ user.github_link|default:'' }}" placeholder="請輸入您的gitHub連結" class="ml-1 border rounded">
+            <input type="url" id="github_link" name="github_link" value="{{ user.github_link|default:'' }}" placeholder="請輸入您的gitHub連結" class="ml-1 bg-white border rounded">
           </div>
         </div>
         <hr class="my-6 border-t border-gray-300" />
@@ -22,7 +22,7 @@
               name="skill"
               value="{{ user.skill|default:'' }}"
               placeholder="請輸入您的技能"
-              class="w-full p-2 mb-3 list-none border rounded"
+              class="w-full p-2 mb-3 list-none bg-white border rounded"
           />
       </ul>
 
@@ -39,7 +39,7 @@
         name="about"
         value="{{ user.about|default:''}}"
         placeholder="請輸入您的自我介紹"
-        class="w-full p-2 border rounded"
+        class="w-full p-2 bg-white border rounded"
         />
     <div class="mb-6">
     </div>
@@ -52,7 +52,7 @@
                     name="title"
                     value="{{ user.title |default:''}}"
                     placeholder="輸入您的職稱"
-                    class="font-bold text-gray-700 border solid border-block-500"
+                    class="font-bold text-gray-700 bg-white border solid border-block-500"
                 />
             </div>
             <div class="mb-5">
@@ -61,7 +61,7 @@
                     name="time"
                     value="{{ user.time |default:''}}"
                     placeholder="輸入您的在單位的時間"
-                    class="mr-2 text-gray-700 border solid border-block-500"
+                    class="mr-2 text-gray-700 bg-white border solid border-block-500"
                 />
             </div>
         </div>
@@ -70,7 +70,7 @@
             name="introduce"
             value="{{ user.introduce|default:'' }}"
             placeholder="說明"
-            class="w-full border solid border-block-500"
+            class="w-full bg-white border solid border-block-500"
         />
     </div>
        <button type="submit" class="text-white bg-green-600 btn btn-sm">更新</button>
